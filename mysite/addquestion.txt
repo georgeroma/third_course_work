@@ -1,0 +1,5 @@
+q = Question(question_text="Some name", pub_date=timezone.now())
+q.save()
+q.choice_set.create(choice_text='The sky', votes=0)
+q = Question.objects.get(pk=7)
+
